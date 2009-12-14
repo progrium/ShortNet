@@ -1,0 +1,14 @@
+-history and ^ syntax
+-watch/stop
+-localize phone number
+-homepages at num
+-append with PageName+
+
+shortweb (shortnet?):
+-!commands
+-@twitter bridge with ^ syntax
+-shortname aliases with ~
+-api using sms auth tokens
+-?meta data (ex: ?api for api url)
+-/operators, call commands for pages
+-!!commands (personal command namespace)
