@@ -36,3 +36,21 @@ def receive():
 
 def send(to, message):
     voice.send_sms(to, message)
+
+
+# There are some silly assumptions below this point
+def localize_number(number, local_number):
+    localized_number = number
+    if number[:2] == local_number[:2]:
+        localized_number = number[2:]
+        if number[2:5] == local_number[2:5]:
+            localized_number = number[5:]
+    return localized_number
+
+def extend_number(from_num, number):
+    if len(number) == 7:
+        return from_num[:5] + number
+    elif len(number) == 10:
+        return from_num[:2] + number
+    else:
+        return number    
