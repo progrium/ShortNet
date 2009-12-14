@@ -31,6 +31,12 @@ def write(write, wiki):
     idx = txt.find(' ')
     page = txt[:idx]
     content = txt[idx+1:]
+    
+    # Append modifier
+    if page.endswith('+') and page[:-1] in wiki:
+        page = page[:-1]
+        content = ' '.join([wiki[page]['content'], content])
+    
     wiki[page] = {
         'page': page,
         'content': content,
