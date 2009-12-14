@@ -12,3 +12,11 @@ shortweb (shortnet?):
 -?meta data (ex: ?api for api url)
 -/operators, call commands for pages
 -!!commands (personal command namespace)
+-notification system (handles STOP filtering)
+-
+
+shared:
+-notification
+-config/mounting
+-modifiers
+-datastore
