@@ -4,7 +4,7 @@ An extensible SMS-based BBS/wiki system
 
 Dependencies
 ------------
-Requires a Google Voice account and the Python libraries BeautifulSoup and simplejson (`easy_install BeautifulSoup simpeljson`)
+Requires a Google Voice account and the Python libraries BeautifulSoup and simplejson (`easy_install BeautifulSoup simplejson`)
 
 How it works
 ------------
