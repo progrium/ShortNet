@@ -1,6 +1,6 @@
-ShortWiki
+ShortNet
 =========
-An SMS-based wiki system using Google Voice
+An extensible SMS-based BBS/wiki system
 
 Dependencies
 ------------
@@ -8,7 +8,7 @@ Requires a Google Voice account and BeautifulSoup (`easy_install BeautifulSoup`)
 
 How it works
 ------------
-When you run `python shortwiki.py` it will ask you for your Google Account for 
+When you run `python shortnet.py` it will ask you for your Google Account for 
 Google Voice. Your Google Voice number is now a wiki service.
 
 Using the Wiki
@@ -33,6 +33,10 @@ Authors
 -------
  * Adam Smith <adam@adamsmith.as>
  * Jeff Lindsay <progrium@gmail.com>
+
+History
+-------
+ShortNet evolved from ShortWiki, a spontaneous one-night hack project at Hacker Dojo.
 
 License
 -------

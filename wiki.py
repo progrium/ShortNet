@@ -2,7 +2,7 @@ from __future__ import with_statement
 import simplejson
 import time
 
-from shortwiki import ERROR_MARK
+from shortnet import ERROR_MARK
 import sms
 
 WIKI_FILE = 'wiki.json'
