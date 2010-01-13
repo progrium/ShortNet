@@ -23,6 +23,16 @@ def moses(requests):
     writes = [r for r in requests if r['txt'].find(' ') != -1]
     return reads, writes
 
+commands = {}
+def set_command(cmd, req):
+    args = cmd.split(' ')
+    if len(args) > 1:
+        commands[args[0]] = args[1]
+    sms.send(req['src'], "Command created")
+
+def run_command(cmd, req):
+    sms.send(req['src'], urllib.urlopen(commands[cmd]).read())
+
 def main(args):
     wiki.init()
 
@@ -37,12 +47,18 @@ def main(args):
 
         # process writes before reads so readers get the latest data
         for write in writes:
-            wiki.write(write, wikidata)
+            if write['txt'].startswith('!'):
+                set_command(write['txt'][1:], write)
+            else:
+                wiki.write(write, wikidata)
             
         wiki.dump(wikidata)
 
         for read in reads:
-            wiki.read(read, wikidata)
+            if read['txt'].startswith('!'):
+                run_command(read['txt'][1:], read)
+            else:
+                wiki.read(read, wikidata)
 
         time.sleep(3)
 
